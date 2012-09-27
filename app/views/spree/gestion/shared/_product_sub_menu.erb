@@ -1,0 +1,9 @@
+<% content_for :sub_menu do %>
+  <ul id="sub_nav" data-hook="admin_product_sub_tabs">
+	<%product_types = Spree::Taxon.find_by_name!("produits").children%>
+	<%product_types.each do |p_tab|%>
+	
+    <%= tab_build p_tab.name.to_sym, :url => "/gestion/"+p_tab.permalink.split('/').last, :match_path => "/"+p_tab.permalink.split('/').last%>
+	<% end %>
+  </ul>
+<% end %>

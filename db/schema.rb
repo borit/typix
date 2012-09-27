@@ -370,6 +370,7 @@ ActiveRecord::Schema.define(:version => 20120522141246) do
     t.string   "presentation", :null => false
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.string   "value_type"
   end
 
   create_table "spree_properties_prototypes", :id => false, :force => true do |t|

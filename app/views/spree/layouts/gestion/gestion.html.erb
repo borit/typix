@@ -5,9 +5,12 @@
   <%= render :partial => 'spree/admin/shared/head' %>
 </head>
 <body class='admin' data-ajax-root-path="<%= spree.root_path %>">
+<div id=>
 <div id='wrapper' data-hook>
-<h2>Gestion</h2>
-<p><%= spree.root_path %></p>
+ <div id="sub-menu" data-hook>
+    <%= yield :sub_menu %>
+    <br class="clear" />
+  </div>	
 <%= yield %>
 </div>
 </body>

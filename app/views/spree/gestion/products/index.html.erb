@@ -1,4 +1,6 @@
+<%= render :partial => 'spree/gestion/shared/product_sub_menu' %>
 <table class="index" id="listing_products">
+	<p>current taxon <%=@selected_taxon.permalink%></p>
   <tr data-hook="admin_products_index_headers">
     <th>Nom</th>
     <th>Prix</th>

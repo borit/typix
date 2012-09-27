@@ -7,8 +7,9 @@ Typix::Application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
   Spree::Core::Engine.routes.prepend do
-    match '/gestion', :to => 'gestion/products#index', :as => :gestion
-    namespace :gestion do
+    match '/gestion/:taxon', :to => 'gestion/products#index', :as => :gestion
+    match '/gestion', :to => 'gestion/products#index'
+    namespace :gestion do 
       resources :products
     end
   end

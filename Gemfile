@@ -40,3 +40,6 @@ gem 'spree'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
+gem 'spree_promo', :git => 'git://github.com/spree/spree_promo.git'
+gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
+
