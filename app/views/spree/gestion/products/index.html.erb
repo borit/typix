@@ -1,17 +1,6 @@
 <%= render :partial => 'spree/gestion/shared/product_sub_menu' %>
-<table class="index" id="listing_products">
-	<p>current taxon <%=@selected_taxon.permalink%></p>
-  <tr data-hook="admin_products_index_headers">
-    <th>Nom</th>
-    <th>Prix</th>
-  </tr>
-<% @products.each do |product| %>
-  <tr <%= "style='color: red;'" if product.deleted? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows">
-    <td><%= link_to product.try(:name), edit_gestion_product_path(product) %></td>
-    <td><%= number_to_currency product.price rescue '' %></td>
-    <td class="actions" data-hook="admin_products_index_row_actions">
-      &nbsp;
-    </td>
-  </tr>
-<% end %>
-</table>
+
+<%@concerned_taxons.each do |taxon|%>
+<h1> <%= taxon.name %> </h1>
+<%= render :partial => "product_gestion_block", :locals => { :taxon => taxon } %>
+<%end%>

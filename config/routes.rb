@@ -7,10 +7,20 @@ Typix::Application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
   Spree::Core::Engine.routes.prepend do
-    match '/gestion/:taxon', :to => 'gestion/products#index', :as => :gestion
-    match '/gestion', :to => 'gestion/products#index'
+    
+    match '/gestion/t' => redirect("/gestion/t/produits&ecran"), :as => :gestion_stock
+   
     namespace :gestion do 
-      resources :products
+       match '/t/:taxon', :to => 'products#index'
+        match '/t/:taxon/new', :to => 'products#new'
+      resources :products, :except => [:new]
+    end
+    namespace :admin do
+      resources :users do
+        member do
+          post :dismiss_banner
+        end
+      end
     end
   end
           # The priority is based upon order of creation:

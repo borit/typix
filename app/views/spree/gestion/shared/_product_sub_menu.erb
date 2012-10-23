@@ -3,7 +3,7 @@
 	<%product_types = Spree::Taxon.find_by_name!("produits").children%>
 	<%product_types.each do |p_tab|%>
 	
-    <%= tab_build p_tab.name.to_sym, :url => "/gestion/"+p_tab.permalink.split('/').last, :match_path => "/"+p_tab.permalink.split('/').last%>
+    <%= tab_build p_tab.name.to_sym, :url => "/gestion/t/"+ convert_path(p_tab.permalink,:ampering), :match_path => "/t/"+convert_path(p_tab.permalink,:ampering)%>
 	<% end %>
   </ul>
 <% end %>

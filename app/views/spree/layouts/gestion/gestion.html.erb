@@ -5,13 +5,24 @@
   <%= render :partial => 'spree/admin/shared/head' %>
 </head>
 <body class='admin' data-ajax-root-path="<%= spree.root_path %>">
-<div id=>
 <div id='wrapper' data-hook>
  <div id="sub-menu" data-hook>
     <%= yield :sub_menu %>
     <br class="clear" />
   </div>	
+ <div class="clear tile_bg" id="content" data-hook>
+
+    <% if flash[:error] %>
+      <div class="flash error"><%= flash[:error] %></div>
+    <% end %>
+    <% if notice %>
+      <div class="flash notice"><%= notice %></div>
+    <% end %>
+
+    <%= render :partial => 'spree/admin/shared/alert', :collection => session[:alerts] %>
+
 <%= yield %>
+  </div>
 </div>
 </body>
 </html>
