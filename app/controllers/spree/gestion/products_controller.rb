@@ -19,6 +19,7 @@ module Gestion
       @product = Spree::Product.new
       build_properties_from_prototype(@product,@prototype) if @product.product_properties.empty?
       build_variants_from_prototype(@product,@prototype)
+      init_image(@product)
     end
 
     def create
@@ -26,7 +27,7 @@ module Gestion
       params[:product][:prototype_id] = nil #in order to avoid doubling of properties.
       @product = Product.new(params[:product])
       @product.taxons << @prototype.taxon      
-      @product.option_types << @prototype.option_types.first
+      @product.option_types << @prototype.option_types
       @product.available_on = Time.now
       if @product.save
         redirect_to gestion_stock_path << "/"<<convert_path(@prototype.taxon.parent.permalink, :ampering), :notice => "Produit enregistré!"
@@ -101,6 +102,9 @@ module Gestion
       end
     end
 
+    def init_image(product)
+      product.master.images.build
+    end
     def build_properties_from_prototype(product,prototype)
       @boolean_properties=[]
       @text_field_properties=[]

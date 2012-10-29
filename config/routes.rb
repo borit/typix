@@ -9,6 +9,7 @@ Typix::Application.routes.draw do
   Spree::Core::Engine.routes.prepend do
     
     match '/gestion/t' => redirect("/gestion/t/produits&ecran"), :as => :gestion_stock
+    match '/gestion/products' => redirect("/gestion/t/")
    
     namespace :gestion do 
        match '/t/:taxon', :to => 'products#index'
