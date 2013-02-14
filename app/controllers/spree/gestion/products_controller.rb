@@ -29,6 +29,7 @@ module Gestion
       @product.taxons << @prototype.taxon      
       @product.option_types << @prototype.option_types
       @product.available_on = Time.now
+      @product.master.price = @product.variants.first.price
       if @product.save
         redirect_to gestion_stock_path << "/"<<convert_path(@prototype.taxon.parent.permalink, :ampering), :notice => "Produit enregistré!"
       else

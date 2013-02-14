@@ -1,13 +1,27 @@
 
 Spree::Product.class_eval do
 
-  alias :original_var_attr= :variants_attributes=
+  alias :original_var_attr= :variants_attributes= #backup the ancient varattr=
 
+  attr_accessible :is_discovery
 
   self.scope("two_last_added", relation.order("#{Spree::Product.quoted_table_name}.created_at DESC").limit(2))
-  after_save :delete_extra_master_variant #method to avoid the double variant, due to nested master
+  self.scope("discovery", where(:is_discovery => true))
 
-  def delete_extra_master_variant
+  after_save :delete_extra_master_variant #method to avoid the double variant, due to nested master
+  before_save :ensure_uniqueness_of_discovery #method to clean other discoveries
+
+
+  def ensure_uniqueness_of_discovery
+    if(self.is_discovery)
+      Spree::Product.discovery.each do |prod|
+        prod.is_discovery = false
+        prod.save
+      end
+    end
+  end
+
+  def delete_extra_master_variant #as spree create automatically the master variant on product creation, we've to delete it. Nifty thing.
     return unless (self.variants_including_master.where(:is_master => true).size > 1)
     self.variants_including_master.where(:is_master => true).each do |m_var|
       m_var.destroy if m_var.images.empty?
