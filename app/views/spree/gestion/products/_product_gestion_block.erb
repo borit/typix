@@ -1,0 +1,19 @@
+<table class="index" id="listing_products">
+  <tr data-hook="admin_products_index_headers">
+    <th>Nom</th>
+    <th>Prix</th>
+	<th data-hook="admin_products_index_header_actions"></th>
+  </tr>
+<% products = taxon.products.active %>  
+<% products.each do |product| %>
+  <tr id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows">
+    <td><%= link_to product.try(:name), edit_gestion_product_path(product) %></td>
+    <td><%= product.has_variants? ? "Variantes" : (number_to_currency product.price rescue '')  %></td>
+    <td class="actions" data-hook="admin_products_index_row_actions">
+      &nbsp;
+ 	<%= link_to 'Effacer', gestion_product_path(product), :confirm => "Effacer le produit #{product.name}?", :method => :delete%>
+    </td>
+  </tr>
+<% end %>
+</table>
+<%= link_to "Ajouter", convert_path(taxon.permalink,:ampering)<<"/new"%>

@@ -1,0 +1,49 @@
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @product } %>
+<%= form_for [:gestion, @product], :html => { :multipart => true } do |f| %>
+
+<%= f.label "Nom" %>
+<%= f.text_field :name %>
+</br>
+</br>
+<b>Propriétés</b><br />
+<br/>
+<%= f.fields_for :product_properties, @text_field_properties do |nested_form| %>
+<%= render "property_fields", :f => nested_form %>
+ <% end %>
+<%= f.fields_for :product_properties, @boolean_properties do |nested_form| %>
+<%= render "property_fields", :f => nested_form %>
+ <% end %>
+ </p>
+ <p>
+<%= f.hidden_field :prototype_id, :value => @prototype.id if @prototype %>
+<% if @product.has_variants? %>
+<%= f.hidden_field :price, :value => 0 %>
+<% else %>
+<%= f.label("Prix") %>
+<%= f.text_field :price %>
+<% end %>
+</br>
+
+ <% if @product.has_variants? %>
+<b>Variantes </b><br />
+<%= f.fields_for :variants do |nested_form| %>
+<%= render "variant_fields", :f => nested_form %>
+<% end %>
+<p><%= jquery_link_to_add_fields "Ajouter une variante", f, :variants %></p>
+</br>
+<% end %>
+<b>Image</b><br />
+<%= image_tag @product.master.images.first.attachment.url unless (@product.master.images.empty? || @product.new_record?)%>
+<%= f.fields_for :variants, @product.master do |nested_form| %>
+<%= render "variant_fields", :f => nested_form %>
+ <% end %>
+</br>
+<b>Description</b><br />
+<%= f.text_area :description, :cols => 40, :rows => 20 %>
+<%= f.label "Découverte?" %>
+<%= f.check_box :is_discovery %>
+</br>
+   <%= @product.new_record? ? f.submit("Ajouter") : f.submit("Mettre à jour le produit") %>
+</br>
+ </p>
+<% end %>

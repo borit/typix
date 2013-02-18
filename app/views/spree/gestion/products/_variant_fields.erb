@@ -1,0 +1,18 @@
+<div class="fields">
+<p>
+	<%= f.fields_for :option_values do |nested_form| %>
+	<%= render "option_value_fields", :f => nested_form %>
+	<% end %>
+	<%= f.fields_for :images do |nested_form| %>
+	<%= render "image_fields", :f => nested_form %>
+	<%= f.hidden_field :is_master, :value => "t" %>
+	<%= f.hidden_field :price, :value => 0 if @product.has_variants?%>
+	<% end %>
+	<br>
+	<% if f.object.images.empty? %>
+	<%= f.label "Prix" %>
+	<%= f.text_field :price %>
+	<%= jquery_link_to_remove_fields "Supprimer la variante", f %><br>
+	<% end %>
+</p>
+</div>
