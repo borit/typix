@@ -29,7 +29,7 @@ module Gestion
       @product.taxons << @prototype.taxon      
       @product.option_types << @prototype.option_types
       @product.available_on = Time.now
-      @product.master.price = @product.variants.first.price
+      #@product.master.price = @product.variants.first.price cannot work here, moved in product_decorator, after reaffecting the true master
       if @product.save
         redirect_to gestion_stock_path << "/"<<convert_path(@prototype.taxon.parent.permalink, :ampering), :notice => "Produit enregistré!"
       else
@@ -76,7 +76,9 @@ module Gestion
     end
 
     def pathing_link
-      @taxon_path = convert_path(params[:taxon],:pathing)
+      if(params[:taxon])  #because route gestion/product has no taxon param
+        @taxon_path = convert_path(params[:taxon],:pathing)
+      end
     end
 
     def convert_path(path,direction)

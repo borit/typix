@@ -24,15 +24,18 @@ Spree::Product.class_eval do
   def delete_extra_master_variant #as spree create automatically the master variant on product creation, we've to delete it. Nifty thing.
     return unless (self.variants_including_master.where(:is_master => true).size > 1)
     self.variants_including_master.where(:is_master => true).each do |m_var|
-      m_var.destroy if m_var.images.empty?
+       m_var.images.empty? ? m_var.destroy : self.master = m_var
     end
+    self.master.price = self.variants.first.price
+    puts "44ALALALALA:id #{self.master.id} and mp #{self.master.price}and  vp#{self.variants.first.price}"
+    self.master.save
   end
 
-  def variants_attributes=(variants_attrs) #because a product in spree cannot recognize its master variant
+  def variants_attributes=(variants_attrs) #because a product in spree cannot recognize its master variant from attribute is_master in the form
     if(!self.new_record?) #because on hand calcul raise nil exception on a non initialized product variant
       variants_attrs.each do |key,value|
         if value[:is_master]
-          self.master.update_attributes(value)
+          self.master.update_attributes(value)   
           variants_attrs.delete(key)
         end
       end
