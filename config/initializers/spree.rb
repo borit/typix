@@ -1,3 +1,10 @@
+#dependency for overriding product filters, see https://groups.google.com/forum/?fromgroups=#!topic/spree-user/vgNtn4WPdbs
+
+
+Rails.application.config.to_prepare do 
+  require_dependency 'lib/spree/product_filters' 
+end
+
 # Configure Spree Preferences
 # 
 # Note: Initializing preferences available within the Admin will overwrite any changes that were made through the user interface when you restart.

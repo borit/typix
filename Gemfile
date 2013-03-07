@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 
+gem 'hirb'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,3 +43,5 @@ gem 'spree_skrill'
 gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
 gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
 
+
+  

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/models/spree/product_decorator.rb</string>
+	<string>app/views/spree/layouts/spree_application.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -203,6 +203,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>app/views/spree/layouts/spree_application.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>67</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>config/routes.rb</key>
 		<dict>
 			<key>caret</key>
@@ -233,10 +247,11 @@
 		<string>app/views/spree/gestion/products/_form.erb</string>
 		<string>app/controllers/spree/gestion/products_controller.rb</string>
 		<string>app/models/spree/product_decorator.rb</string>
+		<string>app/views/spree/layouts/spree_application.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{247, 4}, {1193, 856}}</string>
+	<string>{{376, 172}, {1193, 856}}</string>
 </dict>
 </plist>

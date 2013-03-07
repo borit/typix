@@ -10,7 +10,7 @@ Spree::Product.class_eval do
 
   after_save :delete_extra_master_variant #method to avoid the double variant, due to nested master
   before_save :ensure_uniqueness_of_discovery #method to clean other discoveries
-
+  after_update :update_master_price
 
   def ensure_uniqueness_of_discovery
     if(self.is_discovery)
@@ -26,8 +26,12 @@ Spree::Product.class_eval do
     self.variants_including_master.where(:is_master => true).each do |m_var|
        m_var.images.empty? ? m_var.destroy : self.master = m_var
     end
-    self.master.price = self.variants.first.price
-    puts "44ALALALALA:id #{self.master.id} and mp #{self.master.price}and  vp#{self.variants.first.price}"
+    self.master.price = self.variants.first.price #backup the price
+    self.master.save
+  end
+  
+  def update_master_price
+    self.master.price = self.variants.first.price #backup the price
     self.master.save
   end
 
