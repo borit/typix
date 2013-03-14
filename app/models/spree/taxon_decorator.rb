@@ -8,8 +8,9 @@ Spree::Taxon.class_eval do
     case self.name
     when "TV"
       fs << Spree::ProductFilters.techno_filter if Spree::ProductFilters.respond_to?(:techno_filter)
-      fs << Spree::ProductFilters.threeD_filter if Spree::ProductFilters.respond_to?(:three_d_filter)
+      fs << Spree::ProductFilters.threeD_filter if Spree::ProductFilters.respond_to?(:threeD_filter)
       fs << Spree::ProductFilters.screenSize_filter if Spree::ProductFilters.respond_to?(:screenSize_filter)
+      fs << Spree::ProductFilters.internet_filter if Spree::ProductFilters.respond_to?(:internet_filter)
       puts "taxon #{self.name} decorated."
     else
       puts "No decorations for taxon #{self.name}."
