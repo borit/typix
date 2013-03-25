@@ -24,12 +24,12 @@ Spree::Product.class_eval do
   def delete_extra_master_variant #as spree create automatically the master variant on product creation, we've to delete it. Nifty thing.
     return unless (self.variants_including_master.where(:is_master => true).size > 1)
     self.variants_including_master.where(:is_master => true).each do |m_var|
-       m_var.images.empty? ? m_var.destroy : self.master = m_var
+      m_var.images.empty? ? m_var.destroy : self.master = m_var
     end
     self.master.price = self.variants.first.price #backup the price
     self.master.save
   end
-  
+
   def update_master_price
     self.master.price = self.variants.first.price #backup the price
     self.master.save
@@ -45,5 +45,13 @@ Spree::Product.class_eval do
       end
     end
     self.original_var_attr = variants_attrs
+  end
+
+  def option_values #option not options: one option per product prototype
+    ov = []
+    self.variants.each do |v|
+      ov<<[v.price,v.option_values.pluck(:presentation).first] #to modify if multiple OV for a variant
+    end
+    ov.sort_by {|object| object.second.to_i}
   end
 end

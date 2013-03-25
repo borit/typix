@@ -1,6 +1,11 @@
 
 Spree::Taxon.class_eval do
   has_many :prototypes
+  
+  def get_direct_children
+    self.children.where("parent_id = ?",self.id)
+  end
+  
   def applicable_filters
     fs = []
     # fs << ProductFilters.taxons_below(self)

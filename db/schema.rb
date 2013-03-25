@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029184542) do
+ActiveRecord::Schema.define(:version => 20130319160463) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(:version => 20121029184542) do
     t.integer "numcode"
   end
 
-  create_table "spree_creditcards", :force => true do |t|
+  create_table "spree_credit_cards", :force => true do |t|
     t.string   "month"
     t.string   "year"
     t.string   "cc_type"
@@ -216,7 +216,6 @@ ActiveRecord::Schema.define(:version => 20121029184542) do
     t.decimal  "total",                              :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.string   "state"
     t.decimal  "adjustment_total",                   :precision => 8, :scale => 2, :default => 0.0, :null => false
-    t.decimal  "credit_total",                       :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.integer  "user_id"
     t.datetime "created_at",                                                                        :null => false
     t.datetime "updated_at",                                                                        :null => false
@@ -458,6 +457,7 @@ ActiveRecord::Schema.define(:version => 20121029184542) do
     t.boolean  "match_none"
     t.boolean  "match_all"
     t.boolean  "match_one"
+    t.datetime "deleted_at"
   end
 
   create_table "spree_skrill_transactions", :force => true do |t|
@@ -579,6 +579,7 @@ ActiveRecord::Schema.define(:version => 20121029184542) do
     t.string   "api_key",                :limit => 48
   end
 
+  add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|
@@ -609,9 +610,10 @@ ActiveRecord::Schema.define(:version => 20121029184542) do
   create_table "spree_zones", :force => true do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.boolean  "default_tax", :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.boolean  "default_tax",        :default => false
+    t.integer  "zone_members_count", :default => 0
   end
 
 end

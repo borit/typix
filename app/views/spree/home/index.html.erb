@@ -1,10 +1,14 @@
 <% content_for :sidebar do %>
   <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
+    <%= render :partial => 'spree/shared/taxomenu' %>
   </div>
 <% end %>
 
-<div data-hook="homepage_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+<div id ="discovery" class="horizontal_three_col">
+  <%= render :partial => 'spree/home/discovery', :locals => { :discovery => @discovery } %>
+</div>
+
+<div id="novelties" class="horizontal_three_col">
+  <%= render :partial => 'spree/home/novelties', :locals => { :novelties => @novelties } %>	
 </div>
 

@@ -10,11 +10,10 @@
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <div class="container">
       <%= render :partial => 'spree/shared/header' %>
-      <div id="wrapper" class="row" data-hook>
-		<p><%= "BOOOOO PARAMS #{params}" %></p><br/>
-          <%= breadcrumbs(@taxon) %>
+      <div id="wrapper" data-hook>
+<%="INSPECT PARAMS #{params}" if false %> 
         <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-        <div id="content" class="columns omega <%= !content_for?(:sidebar) ? "sixteen alpha" : "twelve" %>" data-hook>
+        <div id="content" class="<%= !content_for?(:sidebar) ? "full" : "explore" %>" data-hook>
           <%= flash_messages %>
           <%= yield %>
         </div>
