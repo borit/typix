@@ -3,9 +3,6 @@ function my_remove_fields(link) {
   $(link).closest(".fields").hide();
 }
 
-function truc(msg){
-	alert(msg);
-}
 
 function my_add_fields(link, association, content_variant, content_option_type) {
   var new_id = new Date().getTime();

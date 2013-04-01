@@ -10,7 +10,7 @@ Spree::Product.class_eval do
 
   after_save :delete_extra_master_variant #method to avoid the double variant, due to nested master
   before_save :ensure_uniqueness_of_discovery #method to clean other discoveries
-  after_update :update_master_price
+  after_update :update_master_price #be sure that product master price will correspond to lower option value
 
   def ensure_uniqueness_of_discovery
     if(self.is_discovery)
@@ -26,12 +26,13 @@ Spree::Product.class_eval do
     self.variants_including_master.where(:is_master => true).each do |m_var|
       m_var.images.empty? ? m_var.destroy : self.master = m_var
     end
-    self.master.price = self.variants.first.price #backup the price
-    self.master.save
+    update_master_price
   end
 
   def update_master_price
-    self.master.price = self.variants.first.price #backup the price
+    #We display default price and default variant on the customer interface according to lower variant option value (tailleEcran,memory, longueurCable)
+    #To be sure price will fit with first variant op val returned by method option_values below.
+    self.master.price = self.variants.joins(:option_values).order("#{Spree::OptionValue.quoted_table_name}.presentation ASC").first.price
     self.master.save
   end
 
@@ -46,11 +47,11 @@ Spree::Product.class_eval do
     end
     self.original_var_attr = variants_attrs
   end
-
+  
   def option_values #option not options: one option per product prototype
     ov = []
     self.variants.each do |v|
-      ov<<[v.price,v.option_values.pluck(:presentation).first] #to modify if multiple OV for a variant
+      ov<<[v.price,v.option_values.pluck(:presentation).first,v.id] #to modify if multiple OV for a variant
     end
     ov.sort_by {|object| object.second.to_i}
   end

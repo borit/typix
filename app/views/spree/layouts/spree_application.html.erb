@@ -11,7 +11,7 @@
     <div class="container">
       <%= render :partial => 'spree/shared/header' %>
       <div id="wrapper" data-hook>
-<%="INSPECT PARAMS #{params}" if false %> 
+<%="INSPECT PARAMS #{@taxon.permalink}" if false %> 
         <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
         <div id="content" class="<%= !content_for?(:sidebar) ? "full" : "explore" %>" data-hook>
           <%= flash_messages %>

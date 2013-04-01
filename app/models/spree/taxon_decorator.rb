@@ -6,6 +6,15 @@ Spree::Taxon.class_eval do
     self.children.where("parent_id = ?",self.id)
   end
   
+  def customized_icon
+    self.has_descendants? ? "taxons/#{self.name.to_url}B.png" : self.parent.customized_icon #icons are associated with level-two taxon 
+  end
+  
+  def to_breadcrumbs(filArianne= [])
+    self.root? ? filArianne : self.parent.to_breadcrumbs(filArianne<<self.name)
+    filArianne.reverse.join(' > ')
+  end
+  
   def applicable_filters
     fs = []
     # fs << ProductFilters.taxons_below(self)

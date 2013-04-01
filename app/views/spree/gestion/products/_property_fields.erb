@@ -2,5 +2,5 @@
    <%= f.label f.object.property.presentation%>
 	<%= f.hidden_field :property_name, :value => f.object.property.name %>
 	<%value_type = f.object.property.value_type%>
-	<%= value_type || value_type=="boolean" ? (f.check_box :value) : (f.text_field :value) %><br />
+	<%= value_type && value_type=="boolean" ? (f.check_box :value) : (f.text_field :value) %><br />
 </p>
