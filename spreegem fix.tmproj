@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/admin/banners_controller.rb</string>
+	<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/variables.css.scss</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -63,6 +63,48 @@
 	<integer>258</integer>
 	<key>metaData</key>
 	<dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>14</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/spree_core.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/variables.css.scss</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/admin/banners_controller.rb</key>
 		<dict>
 			<key>caret</key>
@@ -126,6 +168,96 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>24</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>24</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>24</integer>
+			</dict>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/base_helper.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>100</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>77</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>100</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>101</integer>
+			</dict>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/products_helper.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>17</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/taxons_helper.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
@@ -154,14 +286,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>40</integer>
+				<integer>7</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>172</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>153</integer>
 		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/product/scopes.rb</key>
 		<dict>
@@ -233,6 +365,34 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/layouts/spree_application.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/products/_cart_form.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>45</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>8</integer>
+		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/products/_properties.html.erb</key>
 		<dict>
 			<key>caret</key>
@@ -252,14 +412,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>56</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>25</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>45</integer>
+			</dict>
 		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/shared/_filters.html.erb</key>
 		<dict>
@@ -290,6 +466,20 @@
 				<key>line</key>
 				<integer>22</integer>
 			</dict>
+		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/shared/_head.html.erb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/taxons/_taxon.html.erb</key>
 		<dict>
@@ -349,6 +539,20 @@
 				<integer>21</integer>
 			</dict>
 		</dict>
+		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/lib/spree/money.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/lib/spree/product_filters.rb</key>
 		<dict>
 			<key>caret</key>
@@ -372,22 +576,32 @@
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/taxons/show.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/lib/spree/core/search/base.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/product.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/base_helper.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/lib/spree/money.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/product_scope/scopes.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/variant.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/product/scopes.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/models/spree/option_value.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/products/show.html.erb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/products_helper.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/products/_cart_form.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/products_controller.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/spree_core.css</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/assets/stylesheets/store/variables.css.scss</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/helpers/spree/taxons_helper.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/layouts/spree_application.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/admin/products/index.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/base_controller.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/admin/products_controller.rb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/controllers/spree/admin/banners_controller.rb</string>
+		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/shared/_head.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/products/_properties.html.erb</string>
 		<string>../.rvm/gems/ruby-1.9.3-p385/gems/spree_core-1.2.0/app/views/spree/shared/_filters.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{364, -187}, {1179, 856}}</string>
+	<string>{{468, 172}, {1179, 856}}</string>
 </dict>
 </plist>

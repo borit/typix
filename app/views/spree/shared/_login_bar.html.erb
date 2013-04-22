@@ -1,0 +1,7 @@
+<% if spree_current_user %>
+  <li id="login-window"><img src="/assets/profilBlack.png"/><%=link_to spree_current_user.login, spree.account_path %></li>
+  <div id="logout"><%= link_to "déconnection", spree.destroy_user_session_path %></div>
+
+<% else %>
+  <li id="login-window"><img src="/assets/profilWhite.png"/><%= link_to "connection", spree.login_path %></li>
+<% end %>

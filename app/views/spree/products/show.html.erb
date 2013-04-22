@@ -1,0 +1,22 @@
+<% content_for :sidebar do %>
+<div data-hook="homepage_sidebar_navigation">
+	<%= render :partial => 'spree/shared/taxomenu' %>
+</div>
+<% end %>
+<div id="product_window">
+	<div id="product_introduction">	
+		<h3><%=@product.taxons.first.name%></h3>
+		<h2 class="product-title"><%= accurate_title %></h2>
+		<p><%= "2D&3D" if (@product.property("three_d").to_bool)%></p>
+	</div>
+	<div id="properties_cadre">
+		<%= render :partial => 'properties' %>
+	</div>
+	<div id="main-image" data-hook>
+		<%= product_image(@product, :itemprop => "image") %>
+	</div>
+</div>
+<div id="cartVarForm" data-hook="cart_form">
+	<%= render :partial => 'cart_form' %>
+</div>
+

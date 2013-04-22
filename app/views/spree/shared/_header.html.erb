@@ -1,0 +1,13 @@
+<header id="header" data-hook>
+  <figure id="logo" data-hook><%= link_to image_tag("logo.png"), root_path %> <p><span>TyPix</span>.be</p></figure>
+  <%= render :partial => 'spree/shared/nav_bar' %>
+<%if request.path_parameters[:controller] == Spree::HomeController.controller_path %>
+<h1>le spécialiste tournaisien des marques </h1>
+<%else%>
+<div id="breadcrumbsLine">
+ <%= render :partial => 'spree/shared/breadcrumbs' if !@taxon.nil?%>
+</div>
+<%end%>
+<img id="sonytop" src="/assets/sonytop.png" alt="Sony"/>
+<img id="samsungtop" src="/assets/samsungtop.png" alt="Samsung"/>
+</header>

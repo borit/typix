@@ -1,0 +1,12 @@
+<div id="disco_col1">
+	<%= link_to(discovery) do %>
+	<h4>découverte</h4>
+	<h3><%=discovery.name%></h3>
+	<%=brand_image(discovery)%>
+	<%end%>
+</div>
+
+<%=link_to(discovery) do
+	discovery_image(discovery, :itemprop => "image", :alt=>"découverte", :class=>"disco_img") end%> 
+
+<p><%=product_description_linebreak(discovery) rescue "Description indisponible."%></p>

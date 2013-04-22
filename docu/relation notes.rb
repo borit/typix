@@ -1,0 +1,1 @@
+https://github.com/rubyjedi/spree-related-products/blob/master/app/models/relation.rb

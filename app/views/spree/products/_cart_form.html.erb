@@ -1,0 +1,22 @@
+<%= form_for :order, :url => populate_orders_url do |f| %>
+<div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+	<% if @product.has_variants? %>
+	<div id="cart-variants-menu" class="variants_cadre">
+		<%= hidden_field_tag "products[#{@product.id}]", @product.variants.first.id%>
+		<%=render :partial => "spree/shared/variants_menu", :locals => {:product => @product}%>
+	</div>
+	<% end%>
+
+	<div id="add-to-cart">
+		<%= hidden_field_tag "quantity", 1 %>
+		<div id="price_detail">
+			<%= money @product.price %>	
+		</div>
+		<%= button_tag :id => 'add-to-cart-button', :type => :submit do %>
+		<%=image_tag("cart.png")%>
+		<% end %>
+	</div>    
+
+</div>
+<% end %>

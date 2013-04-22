@@ -1,0 +1,12 @@
+<%if product.has_variants?%>
+	
+	<%unit=define_option_unit(product) %>
+	<ul>
+	<%first=true%>
+	<%product.option_values.each do |ov|%>
+	<li data-price="<%=ov.first%>" data-variantid="<%=ov.third%>" data-ovvalue="<%=ov.second%>"><%= first ? link_to_function(ov.second+unit,"update_price(this,#{product.id})", :class => "selected") : link_to_function(ov.second+unit, "update_price(this,#{product.id})") %></li>
+
+	<%first=false%>
+	<%end%>
+</ul>
+<%end%>

@@ -1,0 +1,28 @@
+<div class="thumbnail_product">
+	<div class="product_cadre">
+		<%= link_to(product) do %>
+		<div class="taxon_thumbnail">
+		<%=brand_image(product)%>
+		<span><%=product.taxons.first.name%></span>
+		<span class="model"><%=product.name%></span>
+		</div>
+		<div class="clear">
+			
+		</div>
+		<%=small_image(product, :itemprop => "image", :alt=>product.name, :class=>"thumbnail_img") %>
+		<%end%>
+		<p class="carac_left">
+			<%= product.property("processeur") if product.property("processeur")%>
+			<%= "internet" if (!product.property("internet").nil? && product.property("internet").to_bool)%>
+			<%= product.property("canal") if product.property("canal")%>						
+		</p>
+		<p class="carac_right">		
+			<%= "2D&3D" if (product.property("three_d").to_bool)%>	
+			<%= product.property("disque_dur") <<"go" if product.property("disque_dur")%>
+		</p>
+		<p class="thumbnail_price" id=<%="product_price_#{product.id}"%>><%= product.option_values.first.first %>€</p>
+	</div>
+	<div class="variants_cadre">
+		<%=render :partial => "spree/shared/variants_menu", :locals => {:product => product}%>
+		</div>
+</div>

@@ -1,0 +1,17 @@
+<table  class = <%=properties_type%> data-hook>
+		<%if properties_type=="string"%>
+		<tbody>
+			<tr>
+				<td>taille</td>
+				<%default_size=@product.option_values.first.second%>
+				<td id = "size_property"><strong><%= "#{default_size} pouces (#{pouce_to_cm(default_size)} cm)" %></strong></td>
+			</tr>
+		<%end%>
+		<% for product_property in properties_list%>
+		<tr>
+			<td><%= product_property.property.presentation %></td>
+			<td><strong><%= properties_type=="boolean" || product_property.value == "0"? bool_to_symbol(product_property.value) : product_property.value %></strong></td>
+		</tr>
+		</tbody>
+		<% end %>
+</table>

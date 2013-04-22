@@ -1,0 +1,22 @@
+<nav id="sideMenu" data-hook>
+	<%root= (Spree::Taxonomy.find_by_name "produits").root%>
+	<ul>
+		<% root.get_direct_children.each do |taxon| %>
+		<li>
+			<%!taxon.children.first.nil? ? tax_path=seo_url(taxon.children.first)  : tax_path=seo_url(taxon)%>
+			<%=link_to tax_path, :class => "taxonlien" do%>
+			<div class="menuimg">
+				<%=image_tag "taxons/#{taxon.name.to_url}.png" , :class => "icon unselected"%>	
+				<%=image_tag "taxons/#{taxon.name.to_url}B.png" , :class => "icon isSelected"%>				
+			</div>
+			<div class="menuarrow"><%=image_tag "arrow.png" , :class => "unselected" if taxon.name != "voo"%></div>
+			<% end %>
+			<ul class="submenu">
+				<% taxon.get_direct_children.each do |child| %>
+				<li><%=link_to child.name, seo_url(child)%></li>
+				<%end%>
+			</ul>
+		</li>
+		<% end %>
+	</ul>
+</nav>

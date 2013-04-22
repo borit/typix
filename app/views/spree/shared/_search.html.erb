@@ -1,0 +1,6 @@
+<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
+<%= form_tag products_path, :method => :get do %>
+  <%= hidden_field_tag :taxon, '' %>
+  <%= search_field_tag :keywords, params[:keywords], :placeholder => "rechercher" %>
+  <%= image_submit_tag("search.png") %>
+<% end %>

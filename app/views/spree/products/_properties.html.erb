@@ -1,0 +1,12 @@
+<% unless @product_properties.empty? %>  
+
+	<div id="string_properties">
+		 <%= render :partial => 'table_properties', :locals => { :properties_list => @string_properties, :properties_type => "string"}%>
+	</div>
+	<div id="integer_properties">
+		 <%= render :partial => 'table_properties', :locals => { :properties_list => @integer_properties, :properties_type => "integer"}%>
+	</div>
+	<div id="boolean_properties">
+		 <%= render :partial => 'table_properties', :locals => { :properties_list => @boolean_properties, :properties_type => "boolean"}%>		
+	</div>  
+<% end %>
