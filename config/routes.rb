@@ -10,8 +10,10 @@ Typix::Application.routes.draw do
     
     match '/gestion/t' => redirect("/gestion/t/produits&ecran"), :as => :gestion_stock
     match '/gestion/' => redirect("/gestion/t/")
-   
+    
+    
     namespace :gestion do 
+      match '/reductions', :to => 'reductions#index'
        match '/t/:taxon', :to => 'products#index'
         match '/t/:taxon/new', :to => 'products#new'
       resources :products, :except => [:new]

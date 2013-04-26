@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319160463) do
+ActiveRecord::Schema.define(:version => 20130422191042) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -595,6 +595,7 @@ ActiveRecord::Schema.define(:version => 20130319160463) do
     t.integer  "count_on_hand",                               :default => 0,     :null => false
     t.decimal  "cost_price",    :precision => 8, :scale => 2
     t.integer  "position"
+    t.integer  "reduction"
   end
 
   add_index "spree_variants", ["product_id"], :name => "index_variants_on_product_id"
