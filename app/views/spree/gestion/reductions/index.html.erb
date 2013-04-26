@@ -1,0 +1,26 @@
+<%= javascript_tag do %>
+
+ routeJson ="<%= spree.gestion_products_path(:format => 'json', :limit => 10) %>";
+$.fn.productSearch = function(){
+  $(this).objectPickerCustom(routeJson);
+}
+<%end%>
+<form action="form_action.asp">
+promo (en pc): <input type="text" name="promo" value=""><br>
+
+<%=product_picking("reduction[product]","")%>
+
+<%= javascript_tag do %>
+$(document).ready(function () {
+    $("#my_search_field").productSearch();
+});
+<%end%>
+<div id="variants_selectors">
+	<input type="text" name ="reduction[variants]" value id="variants_id_list" style="display:none;">
+
+	<p id="ancrageSelectBox">Select variant</p>
+	<div class="var_box">
+	</div>
+	<input type="submit">
+	</form>
+</div>
