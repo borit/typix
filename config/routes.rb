@@ -14,7 +14,10 @@ Typix::Application.routes.draw do
     
     namespace :gestion do 
       match '/reductions', :to => 'reductions#index'
-       match '/t/:taxon', :to => 'products#index'
+      match '/reductions/create', :to => 'reductions#create', :as => :reduction_create  
+      match '/reductions/reset_promo', :to => 'reductions#destroy_all', :as => :reduction_reset  
+      resources :reductions, :only => :destroy
+      match '/t/:taxon', :to => 'products#index'
         match '/t/:taxon/new', :to => 'products#new'
       resources :products, :except => [:new]
     end

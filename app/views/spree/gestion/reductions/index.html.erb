@@ -5,10 +5,11 @@ $.fn.productSearch = function(){
   $(this).objectPickerCustom(routeJson);
 }
 <%end%>
-<form action="form_action.asp">
-promo (en pc): <input type="text" name="promo" value=""><br>
+<%=form_tag gestion_reduction_create_path%>
+<%= label_tag(:promo, "promo (en pc)") %>
+<%= text_field_tag(:promo)%></br>
 
-<%=product_picking("reduction[product]","")%>
+<%=product_picking("reduction[products]","")%>
 
 <%= javascript_tag do %>
 $(document).ready(function () {
@@ -16,7 +17,7 @@ $(document).ready(function () {
 });
 <%end%>
 <div id="variants_selectors">
-	<input type="text" name ="reduction[variants]" value id="variants_id_list" style="display:none;">
+	<input type="text" name ="reduction[master_variants][]" value id="variants_id_list" style="display:none;">
 
 	<p id="ancrageSelectBox">Select variant</p>
 	<div class="var_box">
@@ -24,3 +25,15 @@ $(document).ready(function () {
 	<input type="submit">
 	</form>
 </div>
+
+<div id="reductions_list">
+<% @product_and_variants.each do |prod,variants| %>
+	<p><%=prod.name%></p>
+	<table>
+	<%	variants.each do |variant| %>
+	<tr><td><%= variant.option_values.first.presentation unless variant.option_values.first.nil?%></td><td> <%=variant.reduction%></td><td><%=link_to_delete(variant,:url => "/gestion/reductions/#{variant.id}")%> </td></tr>
+	<%end%>
+	</table>
+<%end%>
+</div>
+<%=link_to "Annuler toutes les promotions", gestion_reduction_reset_path%>

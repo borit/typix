@@ -11,7 +11,7 @@
 	<div id="add-to-cart">
 		<%= hidden_field_tag "quantity", 1 %>
 		<div id="price_detail">
-			<%= money @product.price %>	
+			<%= money @product.option_values.first.first %>	
 		</div>
 		<%= button_tag :id => 'add-to-cart-button', :type => :submit do %>
 		<%=image_tag("cart.png")%>
