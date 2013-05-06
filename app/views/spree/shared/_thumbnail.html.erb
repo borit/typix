@@ -9,7 +9,10 @@
 		<div class="clear">
 			
 		</div>
-		<%=small_image(product, :itemprop => "image", :alt=>product.name, :class=>"thumbnail_img") %>
+		<div class="cadre_image">
+		<%=small_image(product, :itemprop => "image", :alt=>product.name, :class=>"thumbnail_img") %>			
+		<%=render :partial => "spree/shared/escutcheons", :locals => {:product => product}%>
+		</div>
 		<%end%>
 		<p class="carac_left">
 			<%= product.property("processeur") if product.property("processeur")%>

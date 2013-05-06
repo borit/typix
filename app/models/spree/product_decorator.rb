@@ -51,8 +51,11 @@ Spree::Product.class_eval do
   def option_values #option not options: one option per product prototype
     ov = []
     self.variants.each do |v|
-      ov<<[v.price,v.option_values.pluck(:presentation).first,v.id] #to modify if multiple OV for a variant
+      ov<<[v.price,v.option_values.pluck(:presentation).first,v.id,v.reduction] #to modify if multiple OV for a variant
     end
     ov.sort_by {|object| object.second.to_i}
   end
+  
+  def is_new
+    return ((Time.now - self.created_at)/(3600*24))>30
 end
