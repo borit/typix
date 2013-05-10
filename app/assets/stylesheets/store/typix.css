@@ -303,6 +303,37 @@ nav#sideMenu ul li ul:hover {
 	margin:auto;
 }
 
+.cadre_image{
+	position:relative;
+}
+div.thumbnail_product .escutcheons{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+div.thumbnail_product .escutcheons div{
+	display:block;
+	height:55px;
+	width: 55px;
+	text-align:center;
+	line-height:55px;
+	vertical-align: middle;
+	font-size:15px;
+	font-weight:bold;
+	color:white;
+}
+
+.promo_escu{
+	
+	background-color: rgb(191,1,24);
+}
+
+.new_escu{
+	background-color: rgb(221,139,22);  
+}
+
+
+
 .taxon_thumbnail img.brand_img{
 	float:left;
 }

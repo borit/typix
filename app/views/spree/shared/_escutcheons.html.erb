@@ -1,0 +1,12 @@
+<div class="escutcheons">
+
+	<% if product.is_new? %>
+	<div class="new_escu">NEW</div>
+	<%end%>
+
+	<% if product.option_values.first.fourth.to_i > 0 %>
+	<div id = "promo_escu<%=product.id%>" class="promo_escu">-<%=product.option_values.first.fourth%>%</div>
+	<%else%>
+	<div id = "promo_escu<%=product.id%>" class="promo_escu", style="visibility:hidden"></div>
+	<%end%>
+</div>

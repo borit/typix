@@ -56,6 +56,7 @@ Spree::Product.class_eval do
     ov.sort_by {|object| object.second.to_i}
   end
   
-  def is_new
-    return ((Time.now - self.created_at)/(3600*24))>30
+  def is_new?
+    ((Time.now - self.created_at)/(3600*24))>30
+  end
 end

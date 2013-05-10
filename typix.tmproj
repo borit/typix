@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/spree/shared/_products.html.erb</string>
+	<string>app/assets/javascripts/store/typix_jquery.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -20,7 +20,7 @@
 			<key>filename</key>
 			<string>config/routes.rb</string>
 			<key>lastUsed</key>
-			<date>2013-02-27T10:50:44Z</date>
+			<date>2013-05-10T09:00:46Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -49,235 +49,47 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/assets/javascripts/store/all.js</key>
+		<key>app/assets/javascripts/store/typix_jquery.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>65</integer>
 				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/controllers/application_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/controllers/spree/gestion/products_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>75</integer>
-				<key>line</key>
-				<integer>74</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>24</integer>
-				<key>line</key>
-				<integer>74</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>75</integer>
-				<key>line</key>
-				<integer>74</integer>
-			</dict>
-		</dict>
-		<key>app/controllers/spree/home_controller.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
 				<integer>5</integer>
-				<key>line</key>
-				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/models/spree/base_decorator.rb</key>
+		<key>app/assets/stylesheets/store/typix.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>17</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>321</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>285</integer>
 		</dict>
 		<key>app/models/spree/product_decorator.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>42</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>26</integer>
+				<integer>53</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/models/spree/variant_decorator.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>10</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<key>app/overrides/params_inspect.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>65</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/layouts/application.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>14</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/products/_form.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>98</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>3</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>67</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>98</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-		</dict>
-		<key>app/views/spree/gestion/products/_product_gestion_block.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>23</integer>
-				<key>line</key>
-				<integer>18</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/products/_property_fields.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>87</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/products/_variant_fields.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>65</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>17</integer>
 		</dict>
 		<key>app/views/spree/gestion/products/edit.html.erb</key>
 		<dict>
@@ -287,48 +99,6 @@
 				<integer>99</integer>
 				<key>line</key>
 				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/products/index.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/products/new.html.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>82</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/views/spree/gestion/shared/_product_sub_menu.erb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>157</integer>
-				<key>line</key>
-				<integer>5</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -349,42 +119,42 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/views/spree/layouts/gestion/gestion.html.erb</key>
+		<key>app/views/spree/shared/_breadcrumbs.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/views/spree/layouts/spree_application.html.erb</key>
+		<key>app/views/spree/shared/_escutcheons.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>8</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>app/views/spree/shared/_products.html.erb</key>
+		<key>app/views/spree/shared/_thumbnail.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>64</integer>
+				<integer>8</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>29</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -395,26 +165,26 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>22</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>27</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>64</integer>
+				<integer>8</integer>
 				<key>line</key>
-				<integer>17</integer>
+				<integer>29</integer>
 			</dict>
 		</dict>
-		<key>config/routes.rb</key>
+		<key>app/views/spree/shared/_variants_menu.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>12</integer>
+				<integer>179</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -424,32 +194,19 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app/views/spree/gestion/products/index.html.erb</string>
-		<string>app/views/spree/gestion/shared/_product_sub_menu.erb</string>
-		<string>app/views/spree/gestion/products/_product_gestion_block.erb</string>
-		<string>app/views/spree/gestion/products/new.html.erb</string>
-		<string>app/controllers/application_controller.rb</string>
-		<string>app/controllers/spree/home_controller.rb</string>
-		<string>app/views/spree/layouts/gestion/gestion.html.erb</string>
-		<string>config/routes.rb</string>
-		<string>app/models/spree/product_decorator.rb</string>
-		<string>app/controllers/spree/gestion/products_controller.rb</string>
-		<string>app/views/layouts/application.html.erb</string>
-		<string>app/views/spree/home/index.html.erb</string>
-		<string>app/views/spree/shared/_products.html.erb</string>
-		<string>app/views/spree/layouts/spree_application.html.erb</string>
-		<string>app/overrides/params_inspect.rb</string>
-		<string>app/models/spree/variant_decorator.rb</string>
-		<string>app/models/spree/base_decorator.rb</string>
-		<string>app/assets/javascripts/store/all.js</string>
+		<string>app/assets/stylesheets/store/typix.css</string>
+		<string>app/views/spree/shared/_escutcheons.html.erb</string>
+		<string>app/views/spree/shared/_variants_menu.html.erb</string>
 		<string>app/assets/javascripts/application.js</string>
-		<string>app/views/spree/gestion/products/_form.erb</string>
-		<string>app/views/spree/gestion/products/_property_fields.erb</string>
-		<string>app/views/spree/gestion/products/_variant_fields.erb</string>
+		<string>app/assets/javascripts/store/typix_jquery.js</string>
+		<string>app/models/spree/product_decorator.rb</string>
+		<string>app/views/spree/shared/_breadcrumbs.html.erb</string>
+		<string>app/views/spree/home/index.html.erb</string>
+		<string>app/views/spree/shared/_thumbnail.html.erb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{227, 22}, {1193, 856}}</string>
+	<string>{{229, 111}, {1193, 856}}</string>
 </dict>
 </plist>

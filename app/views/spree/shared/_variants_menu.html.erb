@@ -4,7 +4,7 @@
 	<ul>
 	<%first=true%>
 	<%product.option_values.each do |ov|%>
-	<li data-price="<%=ov.first%>" data-price="<%=ov.fourth%>" data-variantid="<%=ov.third%>" data-ovvalue="<%=ov.second%>"><%= first ? link_to_function(ov.second+unit,"update_price(this,#{product.id})", :class => "selected") : link_to_function(ov.second+unit, "update_price(this,#{product.id})") %></li>
+	<li data-price="<%=ov.first%>" data-promo="<%=ov.fourth%>" data-variantid="<%=ov.third%>" data-ovvalue="<%=ov.second%>"><%= first ? link_to_function(ov.second+unit,"update_price_and_promo(this,#{product.id})", :class => "selected") : link_to_function(ov.second+unit, "update_price_and_promo(this,#{product.id},#{ov.third})") %></li>
 
 	<%first=false%>
 	<%end%>
